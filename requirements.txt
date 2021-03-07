@@ -9,4 +9,4 @@ pickleshare==0.7.5
 numpy==1.19.5
 scikit-learn
 seaborn==0.10.0
-
+requests==2.25.0
