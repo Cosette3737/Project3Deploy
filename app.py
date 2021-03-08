@@ -95,7 +95,7 @@ def predict():
 
 
     if output:           #condition for invalid values
-        return render_template('index.html', prediction_text = "This property is worth ${:,.2f}".format(output))
+        return render_template('index.html', prediction_text = "You entered" (Total_Assessed_Value),  prediction_text = "This property is worth ${:,.2f}".format(output))
         
     #html form to be displayed on screen when no values are inserted; without any output or prediction
     else:
