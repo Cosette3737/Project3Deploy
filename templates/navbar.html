@@ -7,15 +7,15 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav ms-auto mb-2 mb-md-0">
           <li class="nav-item">
+            <a class="nav-link {% if request.path=='/bio' %}active{%endif %}" href="/bio"><i class="fa fa-home"></a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link {% if request.path=='/' %}active{%endif %}" href="/">Predict</a>
           </li>
           <li class="nav-item">
             <a class="nav-link {% if request.path=='/explore' %}active{%endif %}" href="/explore">Explore</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link {% if request.path=='/bio' %}active{%endif %}" href="/bio"><i class="fa fa-home"></a>
-          </li>
-           <!-- li class="nav-item">
+          <!-- li class="nav-item">
             <a class="nav-link {% if request.path=='/property' %}active{%endif %}" href="/property">Resources</a>
           </li -->
         </ul>
