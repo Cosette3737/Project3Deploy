@@ -25,6 +25,10 @@ model = pickle.load(open('model1.pkl', 'rb'))
 def home():
     return render_template('index.html')
 
+@app.route('/Team')
+def home():
+    return render_template('team.html')
+
 
 
 #define the route for post request method 
