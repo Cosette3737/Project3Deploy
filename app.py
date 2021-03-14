@@ -21,14 +21,9 @@ app = Flask(__name__,
 #load the ml model which we have saved earlier in .pkl format            
 model = pickle.load(open('model1.pkl', 'rb'))
 
-@app.route('/')
+@app.route('/index')
 def home():
     return render_template('index.html')
-
-@app.route('/Team')
-def home():
-    return render_template('team.html')
-
 
 
 #define the route for post request method 
@@ -65,7 +60,7 @@ def predict():
             Class_Code_Translated_Agricultural = 0
             Class_Code_Translated_Commercial = 0
             Class_Code_Translated_Exempt = 1 
-            Class_Code_Translated_Industrial = 0  
+            Class_Code_Translated_Industrial = 0    
             Class_Code_Translated_Residential = 0 
         elif (Property_Class == 'Industrial'):
             Class_Code_Translated_Agricultural = 0
@@ -77,10 +72,10 @@ def predict():
             Class_Code_Translated_Agricultural = 0
             Class_Code_Translated_Commercial = 0
             Class_Code_Translated_Exempt = 0 
-            Class_Code_Translated_Industrial = 0 
+            Class_Code_Translated_Industrial = 0  
             Class_Code_Translated_Residential = 1
     # open file pickle.load x and y
-    new_data = [[Total_Assessed_Value, Parcel_Acreage, Parcel_Vacancy_N, Parcel_Vacancy_Y, Class_Code_Translated_Agricultural, Class_Code_Translated_Commercial, Class_Code_Translated_Exempt, Class_Code_Translated_Industrial, Class_Code_Translated_Residential]]
+    new_data= [[Total_Assessed_Value, Parcel_Acreage, Parcel_Vacancy_Y, Parcel_Vacancy_N, Class_Code_Translated_Agricultural, Class_Code_Translated_Commercial, Class_Code_Translated_Exempt, Class_Code_Translated_Industrial, Class_Code_Translated_Residential]]
     # apply x scaler to xdata
     Xscaler = pickle.load(open("Xscaler1.pkl", "rb"))
     Yscaler = pickle.load(open("Yscaler1.pkl", "rb"))
@@ -99,7 +94,7 @@ def predict():
 
 
     if output:           #condition for invalid values
-        return render_template('index.html',  prediction_text = "This property is worth ${:,.2f}".format(output))
+        return render_template('index.html', prediction_text = "This property is worth ${:,.2f}".format(output))
         
     #html form to be displayed on screen when no values are inserted; without any output or prediction
     else:
@@ -115,11 +110,13 @@ def database_data():
 @app.route('/explore')
 def explore():
     return render_template('explore.html')
-  
-@app.route('/bio')
+
+@app.route('/')
 def bio():
-    return render_template('bio.html')
+    return render_template('bio.html') 
+
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+    app.run(debug=True)
+    #port = int(os.environ.get("PORT", 5000))
+    #app.run(host='0.0.0.0', port=port)
