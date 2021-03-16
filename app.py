@@ -115,6 +115,9 @@ def explore():
 def bio():
     return render_template('bio.html') 
 
+@app.route('/comps')
+def comps():
+    return render_template('comps.html') 
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
