@@ -1,7 +1,6 @@
 # <p align ="center">Property Value Prediction </p>
 # <p align ="center">With Machine Learning</p>
 
--------------
 
 ![Image of Project Home Page](https://raw.githubusercontent.com/Cosette3737/RebeccaJoseph/main/assets/img/propertypredict.JPG)
 
