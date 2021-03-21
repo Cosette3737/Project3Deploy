@@ -10,7 +10,7 @@
 
 
 ### Project Overview:
-While the assessed value of a property is a strong indicator of its overall sales price, alternate variable still play a factor. Our tool allows a user to input a property's assessed value, total acreage, type of property, and vacancy status to predict final sale value.
+Using collected data from Indiana Property Sales in 2020, machine learning was used to create a model that would allow property value prediction based on certain parameters such as assessed value, plot size and class of property.  This information was collected via user input and calculated what the estimated price would be.  Along side of the prediction tool is a dashboard that allows the user to interact and explore the collected data. Additionaly, a comparison dashboard allows the user to select actual properties by certain filters and see the actual price of property sales from Indiana 2020 sales. 
 
 ### Dataset:
 [Indiana 2020 Property Sales Disclosure Form Data](https://www.stats.indiana.edu/topic/sdf.asp)
@@ -32,7 +32,6 @@ While the assessed value of a property is a strong indicator of its overall sale
 * HTML
 * CSS
 * SQL
-
 * Flask API
 * SKLearn
 * Pickle
@@ -41,3 +40,4 @@ While the assessed value of a property is a strong indicator of its overall sale
 * Pandas
 * Jupyter Notebook
 * Matplotlib
+* Heroku
