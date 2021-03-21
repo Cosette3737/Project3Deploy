@@ -1,8 +1,11 @@
 # butler-project3-groupD
 
+![Image of Project Home Page](https://raw.githubusercontent.com/Cosette3737/RebeccaJoseph/main/assets/img/propertypredict.JPG)
+
 ### Collaborators:
 * [Max Browning](https://github.com/MaxBrowning)
 * [Becky Joseph](https://github.com/Cosette3737)
+
 
 ### Project Overview:
 While the assessed value of a property is a strong indicator of its overall sales price, alternate variable still play a factor. Our tool allows a user to input a property's assessed value, total acreage, type of property, and vacancy status to predict final sale value.
